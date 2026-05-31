@@ -21,9 +21,37 @@
 
         <!-- Main Content -->
         <main>
-            <h2>Game</h2>
-            <p>Hier komt een leuke game!</p>
+            <h2>Game pagina</h2>
+            
+            <!-- 1 START KNOP -->
+            <button onclick="startGame()">Start spel</button>
 
+            <!-- 2 NAAM -->
+            <br><br>
+            <input type="text" id="name" placeholder="Jouw naam">
+            <button onclick="saveName()">Bevestigen</button>
+            <h3 id="welcome"></h3>
+
+            <!-- 3 DROPDOWN -->
+            <br>
+            <select id="difficulty" onchange="setDifficulty()">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            </select>
+
+            <p id="level"></p>
+
+            <!-- 4 CHECKBOX -->
+            <label>
+            <input type="checkbox" id="agree"> Ik ga akkoord
+            </label>
+            <!-- 5 INPUT SCORE -->
+            <br><br>
+            <input type="number" id="scoreInput" placeholder="Score">
+            <button onclick="checkScore()">Check score</button>
+            
+            <p id="scoreResult"></p>
         </main>
 
         <!-- Footer -->
