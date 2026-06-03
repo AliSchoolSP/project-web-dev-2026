@@ -3,9 +3,9 @@ body {
   margin: 0;
   font-size: 14px;
   background-color: #f4f4f9; 
-  display: grid; 
-  grid-template-columns: repeat(6, 1fr); 
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column; /* Dit dwingt ALLES om onder elkaar te staan */
+  gap: 10px;
 }
 
 header {
@@ -25,7 +25,7 @@ nav {
 
 nav a {
   color: white;
-  margin-right: 10px;
+  margin-right: 15px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -34,6 +34,7 @@ main {
   background: white; 
   padding: 20px;
   color: black; 
+  min-height: 400px;
 }
 
 footer {
@@ -72,7 +73,6 @@ button, select, input[type="text"], input[type="number"] {
   border-radius: 6px;
 }
 
-
 #knopContainer {
   display: flex;
   flex-wrap: wrap; 
@@ -83,30 +83,26 @@ button, select, input[type="text"], input[type="number"] {
   margin-top: 10px;
 }
 
-/* --- Mobiel Layout (Standaard) --- */
-header { grid-column: span 6; }
-nav    { grid-column: span 6; }
-main   { grid-column: span 6; }
-footer { grid-column: span 6; }
 
-/* --- Tablet Layout (Vanaf 768px) --- */
+
+/* Vanaf Tablet (768px) en Desktop (1024px) */
 @media (min-width: 768px) {
   body {
     font-size: 16px;
+    /* We schakelen hier over naar grid, zodat header/footer breed zijn, maar nav en main naast elkaar kunnen */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
   }
+  
   header { grid-column: span 6; }
-  nav    { grid-column: span 1; } 
-  main   { grid-column: span 5; } 
   footer { grid-column: span 6; }
+  
+  nav    { grid-column: span 1; display: flex; flex-direction: column; gap: 10px; } 
+  main   { grid-column: span 5; } 
 }
 
-/* --- Desktop Layout (Vanaf 1024px) --- */
 @media (min-width: 1024px) {
   body {
     font-size: 18px;
   }
-  header { grid-column: span 6; }
-  nav    { grid-column: span 1; } 
-  main   { grid-column: span 5; } 
-  footer { grid-column: span 6; }
 }
