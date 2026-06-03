@@ -1,5 +1,5 @@
 //datastructuur
-let spelers = ["Alex", "Sam", "Noah"];
+const spelers = ["Alex", "Sam", "Noah"];
 
 //Functie 1
 function startGame() 
@@ -10,8 +10,16 @@ function startGame()
 //Functie 2
 function saveName() 
 {
-  let name = document.getElementById("name").value;
-  document.getElementById("welcome").innerText = "Welkom, " + name + "!";
+  if (name.trim() !== "") 
+    {
+      spelers.push(name);
+  document.getElementById("welcome").innerText = "Welkom, " + name + "! Totaal aantal spelers: " + spelers.length;
+  console.log(spelers);
+    } 
+  else 
+    {
+    alert("Vul eerst een naam in!");
+    }
 }
 //Controles
 function setDifficulty() 
