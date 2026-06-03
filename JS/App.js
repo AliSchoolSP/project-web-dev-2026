@@ -55,3 +55,35 @@ function checkScore()
     document.getElementById("scoreResult").innerText = "Probeeer opnieuw!";
   }
 }
+function ontwijkKnop() 
+{
+  let knop = document.getElementById("wegrenKnop");
+  let speelveld = document.getElementById("speelveld");
+
+  let veldBreedte = speelveld.clientWidth;
+  let veldHoogte = speelveld.clientHeight;
+
+  let x = Math.random() * (veldBreedte - knop.clientWidth);
+  let y = Math.random() * (veldHoogte - knop.clientHeight);
+
+  knop.style.position = "absolute";
+  knop.style.left = x + "px";
+  knop.style.top = y + "px";
+}
+
+function dupliceerKnop() 
+{
+  if (aantalKnoppen < 20) {
+    aantalKnoppen++;
+    
+    let container = document.getElementById("knopContainer");
+    let nieuweKnop = document.createElement("button");
+    
+    nieuweKnop.innerText = "Knop " + aantalKnoppen;
+    nieuweKnop.style.backgroundColor = "#00ffcc";
+    nieuweKnop.style.color = "black";
+    nieuweKnop.onclick = dupliceerKnop;
+    
+    container.appendChild(nieuweKnop);
+  }
+}
