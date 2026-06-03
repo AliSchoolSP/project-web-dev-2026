@@ -22,45 +22,38 @@
         
 
         <!-- Main Content -->
-    <main id="gameMain">
-        <h2>Game Pagina</h2>
+    <main>
+    <h2>Game Pagina</h2>
 
-        <button onclick="startGame()">Start spel</button>
-        <br><br>
+    <button onclick="startGame()">Start spel</button>
+    <br><br>
 
-        <input type="text" id="name" placeholder="Jouw naam">
-        <button onclick="saveName()">Bevestigen</button>
-        <p id="welcome"></p>
+    <label for="name">Naam invoeren:</label><br>
+    <input type="text" id="name" placeholder="Jouw naam">
+    <button onclick="saveName()">Bevestigen</button>
+    <p id="welcome"></p>
 
-        <select id="difficulty" onchange="setDifficulty()">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-        <p id="level"></p>
+    <br>
 
-        <input type="checkbox" id="akkoord"> Ik ga akkoord met de spelregels
-        <br><br>
+    <label for="difficulty">Kies niveau:</label><br>
+    <select id="difficulty" onchange="setDifficulty()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <p id="level"></p>
 
-        <input type="number" id="scoreInput" placeholder="Score">
-        <button onclick="checkScore()">Check score</button>
-        <p id="scoreResult"></p>
+    <br>
 
-        <hr>
+    <input type="checkbox" id="akkoord">
+    <label for="akkoord">Ik ga akkoord met de spelregels</label>
+    <br><br>
 
-        <h3>De Fun Zone</h3>
-        <button onclick="wisselThema()" style="background-color: #ff007f; color: white;">Wissel Thema</button>
-        
-        <p>Probeer op deze knop te druken:</p>
-        <div id="speelveld">
-            <button id="wegrenKnop" onmouseover="ontwijkKnop()" style="background-color: orange; color: black;">Klik mij!</button>
-        </div>
-
-        <p>Dupliceer tot max 20 knoppen:</p>
-        <div id="knopContainer">
-            <button onclick="dupliceerKnop()" style="background-color: #00ffcc; color: black;">Klik om te dupliceren</button>
-        </div>
-    </main>
+    <label for="scoreInput">Vul je score in:</label><br>
+    <input type="number" id="scoreInput" placeholder="Score">
+    <button onclick="checkScore()">Check score</button>
+    <p id="scoreResult"></p>
+</main>
   
 
         <!-- Footer -->

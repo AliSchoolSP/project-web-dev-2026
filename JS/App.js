@@ -52,40 +52,6 @@ function checkScore()
   } 
   else 
   {
-    document.getElementById("scoreResult").innerText = "Probeer opnieuw!";
-  }
-}
-
-function ontwijkKnop() {
-  let knop = document.getElementById("wegrenKnop");
-  let speelveld = document.getElementById("speelveld");
-
-  let x = Math.random() * (speelveld.clientWidth - knop.clientWidth);
-  let y = Math.random() * (speelveld.clientHeight - knop.clientHeight);
-  
-  knop.style.position = "absolute";
-  knop.style.left = x + "px";
-  knop.style.top = y + "px";
-}
-
-function dupliceerKnop() {
-  if (aantalKnoppen < 20) {
-    aantalKnoppen++;
-    let container = document.getElementById("knopContainer");
-    let nieuweKnop = document.createElement("button");
-    
-    nieuweKnop.innerText = "Knop " + aantalKnoppen;
-    nieuweKnop.onclick = dupliceerKnop; // Zorgt dat de nieuwe knop ook dupliceert
-    container.appendChild(nieuweKnop);
-  }
-}
-function wisselThema() {
-  let hoofdBlok = document.getElementById("gameMain");
-  if (hoofdBlok.style.backgroundColor === "purple") {
-    hoofdBlok.style.backgroundColor = "white";
-    hoofdBlok.style.color = "black";
-  } else {
-    hoofdBlok.style.backgroundColor = "purple";
-    hoofdBlok.style.color = "yellow";
+    document.getElementById("scoreResult").innerText = "Probeeer opnieuw!";
   }
 }

@@ -63,23 +63,6 @@ footer td {
   border: 1px solid #333;
 }
 
-#speelveld {
-  width: 100%;
-  height: 150px;
-  border: 2px dashed orange;
-  background-color: #fff5eb;
-  position: relative;
-  overflow: hidden;
-}
-#knopContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  background: #f1f2f6;
-  padding: 10px;
-  border-radius: 5px;
-}
-
  /* Mobiel Layout */
 header { grid-column: span 6; }
 nav    { grid-column: span 6; }
