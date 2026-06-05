@@ -1,5 +1,5 @@
 //datastructuur
-const spelers = ["Alex", "Sam", "Noah"];
+const spelers = ["Alisa", "Sam", "Noah"];
 let aantalKnoppen = 1;
 
 //Functie 1
