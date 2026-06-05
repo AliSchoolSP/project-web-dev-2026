@@ -83,16 +83,6 @@ button, select, input[type="text"], input[type="number"] {
   margin-top: 10px;
 }
 
-.Div404 {
-background: #141313;
-  color: red;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-align: center;
-}
-
 
 
 /* Vanaf Tablet (768px) en Desktop (1024px) */
