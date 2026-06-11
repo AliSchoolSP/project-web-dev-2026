@@ -11,6 +11,7 @@ function startGame()
 //Functie 2
 function saveName() 
 {
+  let name = document.getElementById("name").value;
   console.log (name.trim());
     if  (name.trim() !== "") 
       {
