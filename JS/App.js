@@ -12,7 +12,7 @@ function startGame()
 function saveName() 
 {
   let name = document.getElementById("name").value;
-  console.log (name.trim());
+
     if  (name.trim() !== "") 
       {
         spelers.push(name);
@@ -20,6 +20,10 @@ function saveName()
         = "Welkom, " + name + "! Totaal aantal spelers: " + spelers.length;
         console.log(spelers);
       } 
+       else 
+      {
+      alert("Vul eerst een naam in!");
+      }
 
 }
 //Controles
