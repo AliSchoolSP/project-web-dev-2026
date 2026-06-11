@@ -20,10 +20,10 @@ function saveName()
         = "Welkom, " + name + "! Totaal aantal spelers: " + spelers.length;
         console.log(spelers);
       } 
-    else 
-      {
-      alert("Vul eerst een naam in!");
-      }
+    // else 
+    //   {
+    //   alert("Vul eerst een naam in!");
+    //   }
 }
 //Controles
 function setDifficulty() 
