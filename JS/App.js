@@ -11,17 +11,18 @@ function startGame()
 //Functie 2
 function saveName() 
 {
-  if (name.trim() !== "") 
-    {
-      spelers.push(name);
-      document.getElementById("welcome").innerText 
-      = "Welkom, " + name + "! Totaal aantal spelers: " + spelers.length;
-      console.log(spelers);
-    } 
-  else 
-    {
-    alert("Vul eerst een naam in!");
-    }
+  console.log (name.trim());
+    if  (name.trim() !== "") 
+      {
+        spelers.push(name);
+        document.getElementById("welcome").innerText 
+        = "Welkom, " + name + "! Totaal aantal spelers: " + spelers.length;
+        console.log(spelers);
+      } 
+    else 
+      {
+      alert("Vul eerst een naam in!");
+      }
 }
 //Controles
 function setDifficulty() 
